@@ -1,0 +1,46 @@
+<p style="font-size: 18px; font-weight: 600; margin: 0 0 16px 0; font-family: Arial, Helvetica, sans-serif; color: #1f2937;">
+  Hi {{name}},
+</p>
+
+<p style="margin: 0 0 16px 0; color: #374151; font-family: Arial, Helvetica, sans-serif; line-height: 1.5;">
+  You have {{#if isUpdate}}renewed{{else}}subscribed to{{/if}} our service successfully. Here are the details:
+</p>
+
+<!-- Subscription Details Table -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin: 0 0 24px 0; border-collapse: collapse; border: 1px solid #e5e7eb;">
+  <thead>
+  <tr>
+    <th align="left" style="padding: 12px 16px; border: 1px solid #e5e7eb; background-color: #f3f4f6; font-weight: 600; color: #1f2937; font-family: Arial, Helvetica, sans-serif; font-size: 15px;">Detail</th>
+    <th align="left" style="padding: 12px 16px; border: 1px solid #e5e7eb; background-color: #f3f4f6; font-weight: 600; color: #1f2937; font-family: Arial, Helvetica, sans-serif; font-size: 15px;">Value</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td width="35%" style="padding: 12px 16px; border: 1px solid #e5e7eb; font-weight: 600; color: #1f2937; font-family: Arial, Helvetica, sans-serif; font-size: 15px;">Plan</td>
+    <td style="padding: 12px 16px; border: 1px solid #e5e7eb; color: #374151; font-family: Arial, Helvetica, sans-serif; font-size: 15px;">{{planName}}</td>
+  </tr>
+  <tr>
+    <td style="padding: 12px 16px; border: 1px solid #e5e7eb; font-weight: 600; color: #1f2937; font-family: Arial, Helvetica, sans-serif; font-size: 15px;">Start Date</td>
+    <td style="padding: 12px 16px; border: 1px solid #e5e7eb; color: #374151; font-family: Arial, Helvetica, sans-serif; font-size: 15px;">{{startDate}}</td>
+  </tr>
+  <tr>
+    <td style="padding: 12px 16px; border: 1px solid #e5e7eb; font-weight: 600; color: #1f2937; font-family: Arial, Helvetica, sans-serif; font-size: 15px;">End Date</td>
+    <td style="padding: 12px 16px; border: 1px solid #e5e7eb; color: #374151; font-family: Arial, Helvetica, sans-serif; font-size: 15px;">{{endDate}}</td>
+  </tr>
+  <tr>
+    <td style="padding: 12px 16px; border: 1px solid #e5e7eb; font-weight: 600; color: #1f2937; font-family: Arial, Helvetica, sans-serif; font-size: 15px;">Price</td>
+    <td style="padding: 12px 16px; border: 1px solid #e5e7eb; color: #374151; font-family: Arial, Helvetica, sans-serif; font-size: 15px;">{{price}}</td>
+  </tr>
+  <tr>
+    <td style="padding: 12px 16px; border: 1px solid #e5e7eb; font-weight: 600; color: #1f2937; font-family: Arial, Helvetica, sans-serif; font-size: 15px;">Status</td>
+    <td style="padding: 12px 16px; border: 1px solid #e5e7eb; color: #374151; font-family: Arial, Helvetica, sans-serif; font-size: 15px;">{{statusName}}</td>
+  </tr>
+  </tbody>
+</table>
+
+<p style="margin: 0 0 24px 0; color: #374151; font-family: Arial, Helvetica, sans-serif; line-height: 1.5;">
+  Thank you for choosing our service. We hope you enjoy your subscription.
+</p>
+
+<p style="margin: 0 0 4px 0; color: #1f2937; font-weight: 600; font-family: Arial, Helvetica, sans-serif; line-height: 1.5;">{{ emailClosingNote }}</p>
+<p style="margin: 0; color: #4b5563; font-family: Arial, Helvetica, sans-serif; line-height: 1.5;">{{ supportTeamName }}</p>

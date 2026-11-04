@@ -1,0 +1,181 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Contents 4 0 R /Resources << /Font << /F1 5 0 R >> >> >>
+endobj
+4 0 obj
+<< /Length 1487 >>
+stream
+BT
+/F1 10 Tf
+50 800 Td
+(INVOICE) Tj
+ET
+BT
+/F1 10 Tf
+50 782 Td
+() Tj
+ET
+BT
+/F1 10 Tf
+50 764 Td
+(Invoice No: APP1-20260430-000004) Tj
+ET
+BT
+/F1 10 Tf
+50 746 Td
+(Invoice Date: 30 Apr 2026) Tj
+ET
+BT
+/F1 10 Tf
+50 728 Td
+(Status: DRAFT) Tj
+ET
+BT
+/F1 10 Tf
+50 710 Td
+() Tj
+ET
+BT
+/F1 10 Tf
+50 692 Td
+(BILLED TO) Tj
+ET
+BT
+/F1 10 Tf
+50 674 Td
+(Name: Jon Doe) Tj
+ET
+BT
+/F1 10 Tf
+50 656 Td
+(Email: demo@revinr.com) Tj
+ET
+BT
+/F1 10 Tf
+50 638 Td
+() Tj
+ET
+BT
+/F1 10 Tf
+50 620 Td
+(SUBSCRIPTION) Tj
+ET
+BT
+/F1 10 Tf
+50 602 Td
+(Plan: Starter) Tj
+ET
+BT
+/F1 10 Tf
+50 584 Td
+(Billing Cycle: Monthly) Tj
+ET
+BT
+/F1 10 Tf
+50 566 Td
+(Period: 30 Apr 2026 - 30 May 2026) Tj
+ET
+BT
+/F1 10 Tf
+50 548 Td
+() Tj
+ET
+BT
+/F1 10 Tf
+50 530 Td
+(PAYMENT) Tj
+ET
+BT
+/F1 10 Tf
+50 512 Td
+(Method: Online) Tj
+ET
+BT
+/F1 10 Tf
+50 494 Td
+(Transaction ID: -) Tj
+ET
+BT
+/F1 10 Tf
+50 476 Td
+(Payment Date: 30 Apr 2026) Tj
+ET
+BT
+/F1 10 Tf
+50 458 Td
+() Tj
+ET
+BT
+/F1 10 Tf
+50 440 Td
+(Starter           BDT 1,000.00) Tj
+ET
+BT
+/F1 10 Tf
+50 422 Td
+(Discount            BDT 0.00) Tj
+ET
+BT
+/F1 10 Tf
+50 404 Td
+(Subtotal            BDT 1,000.00) Tj
+ET
+BT
+/F1 10 Tf
+50 386 Td
+(VAT                 BDT 0.00) Tj
+ET
+BT
+/F1 10 Tf
+50 368 Td
+(--------------------------------) Tj
+ET
+BT
+/F1 10 Tf
+50 350 Td
+(TOTAL             BDT 1,000.00) Tj
+ET
+BT
+/F1 10 Tf
+50 332 Td
+(Amount Paid       BDT 1,000.00) Tj
+ET
+BT
+/F1 10 Tf
+50 314 Td
+(Balance Due       BDT 0.00) Tj
+ET
+BT
+/F1 10 Tf
+50 296 Td
+() Tj
+ET
+BT
+/F1 10 Tf
+50 278 Td
+(Thank you for your business.) Tj
+ET
+endstream
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000241 00000 n 
+0000001780 00000 n 
+trailer
+<< /Size 6 /Root 1 0 R >>
+startxref
+1850
+%%EOF

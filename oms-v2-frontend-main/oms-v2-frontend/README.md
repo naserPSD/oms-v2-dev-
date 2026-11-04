@@ -1,0 +1,266 @@
+# Revinr OMS Task
+
+This is a [Next.js] project.
+
+[Live Link](https://revinr-oms.vercel.app/)
+
+## Main Dashboard https://revinr-oms.vercel.app/main-dashboard
+
+## Getting Started
+
+# Project Structure
+
+```
+└── 📁src
+    └── 📁app
+        └── 📁(auth)
+            └── 📁forget-password
+                ├── page.jsx
+            └── 📁login-success
+                ├── page.jsx
+            └── 📁reset-password
+                ├── page.js
+            └── 📁sign-in
+                ├── page.jsx
+            └── 📁sign-up
+                ├── page.jsx
+            ├── layout.js
+        └── 📁(frontend)
+            └── 📁pricing
+                ├── page.js
+            ├── layout.js
+            ├── page.js
+        └── 📁(user-dashboard)
+            └── 📁company-setting
+                ├── page.js
+            └── 📁hr-dashboard
+                └── 📁attendance
+                    ├── page.js
+                └── 📁employee
+                    ├── page.js
+                └── 📁holidays
+                    ├── page.js
+                └── 📁leave
+                    ├── page.js
+                └── 📁meeting
+                    ├── page.js
+                └── 📁notes
+                    ├── page.js
+                └── 📁notices
+                    ├── page.js
+                └── 📁recruitment
+                    ├── page.js
+                └── 📁requisitions
+                    ├── page.js
+                ├── page.js
+            └── 📁main-dashboard
+                ├── page.js
+            └── 📁my-profile
+                ├── page.js
+            └── 📁profile
+                ├── page.js
+            └── 📁tasks
+                ├── page.js
+            ├── layout.js
+        └── 📁(user-verfication)
+            └── 📁email-verification
+                ├── page.js
+            ├── layout.js
+        └── 📁api
+            └── 📁proxy
+                └── 📁[...path]
+                    ├── route.js
+        └── 📁docs
+            └── 📁button
+                ├── page.jsx
+            └── 📁button2
+                ├── page.jsx
+            └── 📁modal
+                ├── page.jsx
+            ├── layout.jsx
+        └── 📁styles
+            ├── components.css
+        ├── error.js
+        ├── favicon.ico
+        ├── globals.css
+        ├── layout.js
+        ├── not-found.js
+    └── 📁components
+        └── 📁common
+            ├── Loading.jsx
+            ├── Modal.jsx
+            ├── ModalTw.jsx
+            ├── SocialLoginSection.jsx
+        └── 📁ui
+            ├── AvatarUpload copy 2.jsx
+            ├── AvatarUpload copy.jsx
+            ├── AvatarUpload.jsx
+            ├── badge.jsx
+            ├── button-uses.md
+            ├── button.jsx
+            ├── ButtonTw copy.jsx
+            ├── ButtonTw.jsx
+            ├── ButtonTw2.jsx
+            ├── card.jsx
+            ├── chart.jsx
+            ├── DatePicker.jsx
+            ├── dialog.jsx
+            ├── dropdown-menu.jsx
+            ├── FileUpload.jsx
+            ├── Input.jsx
+            ├── popover.jsx
+            ├── Radio.jsx
+            ├── RadioButton.jsx
+            ├── RadioGroup.jsx
+            ├── SelectSearch.jsx
+            ├── SimpleTooltip.jsx
+            ├── skeleton.jsx
+            ├── switch.jsx
+            ├── SwitchButton.jsx
+            ├── TabContent.jsx
+            ├── TabItem.jsx
+            ├── tooltip.jsx
+        ├── CodeBlock.js
+        ├── Preview.js
+        ├── PropsTable.js
+        ├── theme-provider.jsx
+    └── 📁context
+        ├── AuthContext.js
+    └── 📁data
+        ├── attendanceChartData.jsx
+    └── 📁lib
+        ├── utils.js
+    └── 📁pages
+        └── 📁auth
+            └── 📁forgetPassword
+                ├── ForgetPassword copy 2.jsx
+                ├── ForgetPassword.jsx
+            └── 📁login
+                ├── Login copy.jsx
+                ├── Login.jsx
+            └── 📁resetPassword
+                ├── ResetPassword.jsx
+            └── 📁signup
+                ├── SignUp.jsx
+                ├── SignUpForm.jsx
+        └── 📁frontend
+            └── 📁home
+                ├── Home.jsx
+            └── 📁pricing
+                ├── Pricing.jsx
+        └── 📁userDashboard
+            └── 📁companySettingDashboard
+                └── 📁companyBasicInformation
+                    ├── CompanyBasicInformation.jsx
+                    ├── CompanyBasicInformationModal.jsx
+                └── 📁departmentsList
+                    ├── DepartmentsListTable.jsx
+                └── 📁designationsTable
+                    ├── DesignationsTable.jsx
+                └── 📁roleAndPermission
+                    ├── RoleAndPermissionTable.jsx
+                └── 📁serviceList
+                    ├── ServiceListTable.jsx
+                └── 📁userList
+                    ├── UserListModal.jsx
+                    ├── UserListTable.jsx
+                ├── CompanySettingDashboard.jsx
+            └── 📁hrDashboard
+                └── 📁hrAttendance
+                    ├── HrAttendance.jsx
+                └── 📁hrDashboardMain
+                    ├── HrAttendanceOverview.jsx
+                    ├── HrDashboard.jsx
+                    ├── HrLeaveDashboardSection.jsx
+                └── 📁hrEmployee
+                    ├── HrEmployee.jsx
+                └── 📁hrLeave
+                    ├── HrLeave.jsx
+            └── 📁mainDashboard
+                ├── AccountsRequisitionsCrmMainDashboardSection.jsx
+                ├── AttendanceStatistics.jsx
+                ├── CalendarTimeSchedulesSection.jsx
+                ├── InitialSetup copy.jsx
+                ├── InitialSetup.jsx
+                ├── MainDashboard.jsx
+            └── 📁myProfile
+                └── 📁tabs
+                    └── 📁modals
+                        ├── AddCertificationModal.jsx
+                        ├── AddContactInfoModal.jsx
+                        ├── AddEducationModal.jsx
+                        ├── AddEmployeeHistoryModal.jsx
+                        ├── AddPersonalInfoModal.jsx
+                        ├── AddProjectModal.jsx
+                        ├── AddReferenceModal.jsx
+                        ├── AddSkillModal.jsx
+                        ├── AddTrainingModal.jsx
+                        ├── AddWorkExperienceModal.jsx
+                    ├── AttendanceSummaryChart.jsx
+                    ├── AttendanceTab.jsx
+                    ├── DocumentsTab.jsx
+                    ├── EmployeeHistoryTab copy.jsx
+                    ├── EmployeeHistoryTab.jsx
+                    ├── GeneralInfoTab copy.jsx
+                    ├── GeneralInfoTab.jsx
+                    ├── ProjectTab.jsx
+                    ├── SalaryAndPayrollTab.jsx
+                    ├── SkillsAndCertificationTab.jsx
+                    ├── TrainingAndReferenceTab.jsx
+                    ├── WorkExperienceAndEducationTab.jsx
+                ├── MyProfile.jsx
+                ├── ProfileLeftSide.jsx
+                ├── ProfileRightSide.jsx
+            └── 📁profile
+                └── 📁tabs
+                    └── 📁modals
+                        ├── AddContactInfoModal.jsx
+                        ├── AddEducationModal.jsx
+                        ├── AddEmployeeHistoryModal.jsx
+                        ├── AddPersonalInfoModal.jsx
+                        ├── AddWorkExperienceModal.jsx
+                    ├── AttendanceSummaryChart.jsx
+                    ├── AttendanceTab.jsx
+                    ├── DocumentsTab.jsx
+                    ├── EmployeeHistoryTab copy.jsx
+                    ├── EmployeeHistoryTab.jsx
+                    ├── GeneralInfoTab copy.jsx
+                    ├── GeneralInfoTab.jsx
+                    ├── SalaryAndPayrollTab.jsx
+                    ├── WorkExperienceAndEducationTab.jsx
+                ├── Profile copy.jsx
+                ├── Profile.jsx
+                ├── ProfileLeftSide.jsx
+                ├── ProfileRightSide.jsx
+    └── 📁shared
+        └── 📁dashBoardSidebar
+            ├── DropdownSection.jsx
+            ├── Sidebar.jsx
+        └── 📁loader
+            ├── MiniSpinner.js
+        └── 📁navbar
+            ├── AuthNavbar.jsx
+            ├── DashboardNavbar.jsx
+            ├── Navbar.jsx
+            ├── UserProfileNavbar.jsx
+        └── 📁pagination
+            ├── CustomPagination.jsx
+    └── 📁store
+        ├── useAuthStore.js
+        ├── useCommonStore.js
+    └── 📁utils
+        ├── attendanceData.js
+        ├── baseURL.js
+        ├── commonApiFunction.js
+        ├── employeeListData.js
+        ├── font.js
+        ├── generateSlug.js
+        ├── googlePopupLogin.js
+        ├── helpers.js
+        ├── priceData.js
+        ├── ProtectedRoute copy.js
+        ├── ProtectedRoute.js
+        ├── RestApi.js
+        ├── sidebarItems.js
+    └── i18n.js
+```

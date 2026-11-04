@@ -1,0 +1,71 @@
+<p style="font-size: 18px; font-weight: 600; margin: 0 0 16px 0; font-family: Arial, Helvetica, sans-serif; color: #1f2937;">
+  Hi {{name}},
+</p>
+
+<p style="margin: 0 0 16px 0; color: #374151; font-family: Arial, Helvetica, sans-serif; line-height: 1.5;">
+  You are invited to the meeting <strong style="color: #1f2937;">{{meetingTitle}}</strong>.
+</p>
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin: 0 0 24px 0; border-collapse: collapse; background-color: #f9fafb; border-radius: 8px;">
+  <tr>
+    <td style="padding: 16px 20px; font-family: Arial, Helvetica, sans-serif; color: #374151; line-height: 1.6;">
+      <p style="margin: 0 0 8px 0;"><strong style="color: #1f2937;">Host:</strong> {{hostName}}</p>
+      <p style="margin: 0 0 8px 0;"><strong style="color: #1f2937;">Type:</strong> {{meetingType}}</p>
+      <p style="margin: 0 0 8px 0;"><strong style="color: #1f2937;">Date:</strong> {{meetingDate}}</p>
+      <p style="margin: 0 0 8px 0;"><strong style="color: #1f2937;">Time:</strong> {{meetingTime}}</p>
+      {{#if roomName}}
+      <p style="margin: 0 0 8px 0;"><strong style="color: #1f2937;">Room:</strong> {{roomName}}</p>
+      {{/if}}
+      {{#if location}}
+      <p style="margin: 0 0 8px 0;"><strong style="color: #1f2937;">Location:</strong> {{location}}</p>
+      {{/if}}
+      {{#if agendaPreview}}
+      <p style="margin: 8px 0 0 0;"><strong style="color: #1f2937;">Agenda:</strong><br/>{{{agendaPreview}}}</p>
+      {{/if}}
+    </td>
+  </tr>
+</table>
+
+{{#if meetUrl}}
+<p style="margin: 0 0 16px 0; color: #374151; font-family: Arial, Helvetica, sans-serif; line-height: 1.5;">
+  Join online using the Google Meet link below:
+</p>
+<table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin: 0 0 24px 0; border-collapse: collapse;">
+  <tr>
+    <td align="left" style="font-family: Arial, Helvetica, sans-serif;">
+      <table cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse;">
+        <tr>
+          <td align="center" bgcolor="#2563eb" style="border-radius: 6px; background-color: #2563eb;">
+            <a href="{{#if joinMeetUrl}}{{joinMeetUrl}}{{else}}{{meetUrl}}{{/if}}"
+               target="_blank"
+               style="display: inline-block; padding: 12px 28px; font-family: Arial, Helvetica, sans-serif; color: #ffffff; font-size: 16px; font-weight: 600; text-decoration: none; border-radius: 6px; background-color: #2563eb; border: 1px solid #2563eb;">
+              Join Google Meet
+            </a>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+{{/if}}
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin: 0 0 32px 0; border-collapse: collapse;">
+  <tr>
+    <td align="left" style="font-family: Arial, Helvetica, sans-serif;">
+      <table cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse;">
+        <tr>
+          <td align="center" bgcolor="#22c55e" style="border-radius: 6px; background-color: #22c55e;">
+            <a href="{{#if joinDashboardUrl}}{{joinDashboardUrl}}{{else}}{{meetingLink}}{{/if}}"
+               target="_blank"
+               style="display: inline-block; padding: 12px 28px; font-family: Arial, Helvetica, sans-serif; color: #ffffff; font-size: 16px; font-weight: 600; text-decoration: none; border-radius: 6px; background-color: #22c55e; border: 1px solid #22c55e;">
+              Open Meeting
+            </a>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+
+<p style="margin: 0 0 4px 0; color: #1f2937; font-weight: 600; font-family: Arial, Helvetica, sans-serif; line-height: 1.5;">{{emailClosingNote}}</p>
+<p style="margin: 0; color: #4b5563; font-family: Arial, Helvetica, sans-serif; line-height: 1.5;">{{supportTeamName}}</p>

@@ -1,0 +1,30 @@
+pipeline {
+  agent any
+
+  stages {
+    stage('Frontend Pull Code') {
+      steps {
+        git branch: 'main',
+        url: 'https://revinr.site/oms-v2/oms-v2-frontend.git'
+      }
+    }
+
+    stage('Install Dependency') {
+      steps {
+        sh 'npm install'
+      }
+    }
+
+    stage('Build') {
+      steps {
+        sh 'npm run build'
+      }
+    }
+
+    stage('Restart Server - PM2 - Frontend') {
+      steps {
+        sh 'pm2 reload ecosystem.config.js'
+      }
+    }
+  }
+}

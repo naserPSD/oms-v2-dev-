@@ -1,0 +1,63 @@
+import {
+  Entity,
+  PrimaryGeneratedColumn,
+  Column,
+  CreateDateColumn,
+  UpdateDateColumn,
+  ManyToOne,
+  JoinColumn,
+} from 'typeorm';
+import { Application } from '@module/application/entities/application.entity';
+import { User } from '@module/users/entities/user.entity';
+import { Employee } from '@module/hr-management/entities/employees.entity';
+import { JobVacancy } from '@module/recruitment/entitities/job-vacancies.entity';
+
+@Entity({ name: 'job_interviewers', synchronize: false })
+export class JobInterviewer {
+  @PrimaryGeneratedColumn({ unsigned: true })
+  id: number;
+
+  @Column({ name: 'app_id', type: 'int', unsigned: true })
+  appId: number;
+
+  @ManyToOne(() => Application, { eager: false, onDelete: 'CASCADE' })
+  @JoinColumn({ name: 'app_id' })
+  app?: Application;
+
+  @Column({ name: 'job_vacancy_id', type: 'int', unsigned: true })
+  jobVacancyId: number;
+
+  @ManyToOne(() => JobVacancy, (jobVacancy) => jobVacancy.jobInterviewers, {
+    eager: false,
+  })
+  @JoinColumn({ name: 'job_vacancy_id' })
+  jobVacancy?: JobVacancy;
+
+  @Column({ name: 'employee_id', type: 'int', unsigned: true })
+  employeeId: number;
+
+  @ManyToOne(() => Employee, (employee) => employee.jobInterviewers, {
+    eager: false,
+  })
+  @JoinColumn({ name: 'employee_id' })
+  employee?: Employee;
+
+  @CreateDateColumn({
+    type: 'timestamp',
+    precision: 6,
+    name: 'created_at',
+    default: () => 'CURRENT_TIMESTAMP(6)',
+  })
+  createdAt: Date;
+
+  @UpdateDateColumn({
+    type: 'timestamp',
+    precision: 6,
+    name: 'updated_at',
+    default: () => 'CURRENT_TIMESTAMP(6)',
+    onUpdate: 'CURRENT_TIMESTAMP(6)',
+  })
+  updatedAt: Date;
+}
+
+//

@@ -1,0 +1,34 @@
+---
+description: Sanzio design template source of truth for public/marketing pages and images
+globs: src/app/(website)/**/*,src/features/landing/**/*
+alwaysApply: true
+---
+
+# Sanzio Design Template
+
+When designing or redesigning **public / marketing website pages**, treat this folder as the design source of truth:
+
+`C:\Users\Razib\Downloads\Sanzio website\Sanzio website`
+
+## What to follow
+
+- **Layout, typography, spacing, section order, and visual language** from:
+  - `Sanzio Homepage (Standalone) (1).html`
+- **Images / logos / screenshots / icons** only from:
+  - `C:\Users\Razib\Downloads\Sanzio website\Sanzio website\images\`
+- Copy needed assets into the frontend public assets folder when implementing (e.g. `public/` or the project’s existing landing image path). Do not invent placeholder stock art when a template image exists.
+
+## Scope
+
+Applies to public pages such as:
+
+- Home, About, Suite/Products, Blog, Connect, Contact
+- Files under `src/app/(website)/` and `src/features/landing/`
+
+Does **not** override authenticated dashboard / app UI design unless the user explicitly asks.
+
+## Implementation notes
+
+- Match the template’s composition closely; adapt to existing Next.js/React structure in `oms-v2-frontend`.
+- Prefer the template’s brand treatment, hero treatment, and section hierarchy over generic AI landing layouts.
+- If template and current code conflict on public pages, prefer the Sanzio template unless the user says otherwise.

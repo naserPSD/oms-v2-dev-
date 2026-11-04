@@ -1,0 +1,634 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Manufacturing+Consent&family=Oswald:wght@200..700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap'); */
+@import "./styles/components.css";
+/* Import btn first */
+@import "tailwindcss";
+/* @plugin "flowbite-react/plugin/tailwindcss";
+@source "../../.flowbite-react/class-list.json"; */
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
+
+@theme inline {
+  /* --color-theme-dark: #111827; */
+  /* --color-theme-dark: oklch(0.279 0.041 260.031); */
+  /* --color-theme-dark: oklch(0.453 0.124 130.933); */
+  --color-theme-dark: #111827;
+  --color-card-dark: #1f2937;
+  /* --color-theme-light: #F3F4F6; */
+  --color-theme-light: #fff;
+  --color-theme-dark-text: #374151;
+  --color-theme-light-text: #d1d5db;
+  /* --color-background-dark: #0f0e0e; */
+  --color-background-dark: #080d16;
+  /* --color-background-dark: #040404; */
+  /* --color-background-dark: #181820; */
+  /* --color-background-light: #F6F7FA; */
+  --color-background-light: #f3f4f6;
+  /* --color-background-light: #ebfcff; */
+  /* colors */
+  /* Primary Colors */
+  --color-primaryColor: #2563eb;
+  --color-primaryColor-400: #51a2ff;
+  --color-primaryColor-500: #2b7fff;
+  --color-primaryColor-600: #155dfc;
+  --color-primaryColor-700: #1447e6;
+  --color-primaryColor-800: #193cb8;
+  /* Secondary Colors */
+
+  --color-secondaryColor: #06b6d4;
+  --color-secondaryColor-600: #0092b8;
+  --color-secondaryColor-light: #00b6bc;
+  --color-info: #00a2eb;
+
+  /* border color */
+  --color-lightBorder: #e0e5ed;
+  --color-darkBorder: #334155;
+
+  /* SideBar color */
+  --color-sidebarPrimaryColor: #111827;
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+:root {
+  --radius: 0.625rem;
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.145 0 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.145 0 0);
+  --primary: oklch(20.463% 0.00002 271.152);
+  --primary-foreground: oklch(0.985 0 0);
+  --secondary: oklch(0.97 0 0);
+  --secondary-foreground: oklch(0.205 0 0);
+  --muted: oklch(0.97 0 0);
+  --muted-foreground: oklch(0.556 0 0);
+  --accent: oklch(0.97 0 0);
+  --accent-foreground: oklch(20.463% 0.00002 271.152);
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: oklch(0.922 0 0);
+  --input: oklch(0.922 0 0);
+  --ring: oklch(0.708 0 0);
+  --chart-1: oklch(0.646 0.222 41.116);
+  --chart-2: oklch(0.6 0.118 184.704);
+  --chart-3: oklch(0.398 0.07 227.392);
+  --chart-4: oklch(0.828 0.189 84.429);
+  --chart-5: oklch(0.769 0.188 70.08);
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.145 0 0);
+  --sidebar-primary: oklch(0.205 0 0);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.97 0 0);
+  --sidebar-accent-foreground: oklch(0.205 0 0);
+  --sidebar-border: oklch(0.922 0 0);
+  --sidebar-ring: oklch(0.708 0 0);
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.145 0 0);
+}
+
+.dark {
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.205 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.205 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.922 0 0);
+  --primary-foreground: oklch(0.205 0 0);
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.269 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.704 0.191 22.216);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.556 0 0);
+  --chart-1: oklch(0.488 0.243 264.376);
+  --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: oklch(0.645 0.246 16.439);
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(1 0 0 / 10%);
+  --sidebar-ring: oklch(0.556 0 0);
+}
+
+@custom-variant dark (&:where(.dark, .dark *));
+/* @layer components {
+
+  .sidebar-scroll {
+    @apply overflow-y-auto;
+  }
+
+  .table-scroll {
+    @apply overflow-x-auto;
+  }
+
+  .dark .sidebar-scroll {
+    @apply bg-sidebar text-sidebar-foreground;
+  }
+
+  .dark .table-scroll {
+    @apply bg-sidebar text-sidebar-foreground;
+  }
+}
+@layer utilities {
+  .bg-sidebar {
+    @apply bg-color-sidebar;
+  }
+  .text-sidebar-foreground {
+    @apply text-color-sidebar-foreground;
+  }
+  .text-sidebar-primary-foreground {
+    @apply text-color-sidebar-primary-foreground;
+  }
+  .text-sidebar-accent-foreground {
+    @apply text-color-sidebar-accent-foreground;
+  }
+  .text-sidebar-primary {
+    @apply text-color-sidebar-primary;
+  }
+  .text-sidebar-accent {
+    @apply text-color-sidebar-accent;
+  }
+} */
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    /* font-family: "Manufacturing Consent", system-ui;
+    font-weight: 400;
+    font-style: normal; */
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Compoonents */
+/* @layer utilities { */
+@layer utilities {}
+
+.background-color {
+  @apply bg-theme-light dark:bg-theme-dark;
+}
+
+/* Scrollbar style */
+.sidebar-scroll::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.sidebar-scroll::-webkit-scrollbar-thumb:hover {
+  cursor: pointer;
+  background-color: #64748b;
+  /* lighter color on hover */
+}
+
+.sidebar-scroll::-webkit-scrollbar-thumb {
+  background-color: #334155;
+  border-radius: 10px;
+}
+
+.sidebar-scroll::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+/* For tables: thin, gray scrollbars with no arrow buttons */
+.table-scroll::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.table-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.table-scroll::-webkit-scrollbar-thumb {
+  background-color: #9ca3af;
+  /* Tailwind gray-400 */
+  border-radius: 6px;
+}
+
+.table-scroll::-webkit-scrollbar-thumb:hover {
+  cursor: pointer;
+}
+
+/* Hide scrollbar buttons */
+.table-scroll::-webkit-scrollbar-button {
+  display: none;
+}
+
+.table-scroll {
+  scroll-behavior: smooth;
+}
+
+.hidden-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+body.swal2-height-auto {
+  padding-right: 0px !important;
+}
+
+.capitalize {
+  text-transform: capitalize !important;
+}
+
+.swal-popup {
+  @apply text-gray-900 bg-white dark:bg-gray-900 dark:text-white;
+}
+
+/* SweetAlert2 Comprehensive Dark & Light Theme Support */
+.dark .swal2-popup {
+  background-color: #111827 !important;
+  color: #f3f4f6 !important;
+  border: 1px solid #1f2937 !important;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5) !important;
+}
+
+.dark .swal2-title {
+  color: #f9fafb !important;
+}
+
+.dark .swal2-html-container {
+  color: #d1d5db !important;
+}
+
+.dark .swal2-icon.swal2-warning {
+  border-color: #f59e0b !important;
+  color: #f59e0b !important;
+}
+
+.dark .swal2-icon.swal2-question {
+  border-color: #10b981 !important;
+  color: #10b981 !important;
+}
+
+.dark .swal2-icon.swal2-error {
+  border-color: #ef4444 !important;
+  color: #ef4444 !important;
+}
+
+.dark .swal2-icon.swal2-success {
+  border-color: #10b981 !important;
+  color: #10b981 !important;
+}
+
+.dark .swal2-icon.swal2-info {
+  border-color: #3b82f6 !important;
+  color: #3b82f6 !important;
+}
+
+.dark .swal2-footer {
+  border-color: #374151 !important;
+  color: #9ca3af !important;
+}
+
+.swal2-actions {
+  gap: 0.5rem !important;
+}
+
+.swal-ok-btn {
+  @apply px-4 py-2 rounded-md font-semibold cursor-pointer bg-green-500 hover:bg-green-600 text-white dark:bg-green-600 dark:hover:bg-green-700 dark:text-white;
+}
+
+.swal-confirm-btn {
+  @apply px-4 py-2 rounded-md font-semibold cursor-pointer bg-blue-500 hover:bg-blue-600 text-white dark:bg-blue-600 dark:hover:bg-blue-700 dark:text-white;
+}
+
+.swal-cancel-btn {
+  @apply px-4 py-2 rounded-md font-semibold cursor-pointer ml-2 bg-red-500 hover:bg-red-600 text-white dark:bg-gray-600 dark:hover:bg-gray-700 dark:text-white;
+}
+
+@keyframes slide-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slide-in {
+  animation: slide-in 0.3s ease-out;
+}
+
+.tooltip {
+  visibility: hidden;
+  position: absolute;
+}
+
+.has-tooltip:hover .tooltip {
+  visibility: visible;
+  z-index: 100;
+}
+
+.copied-text {
+  @apply absolute text-green-500 transition-opacity duration-300 animate-[fadeIn_0.3s_ease-out] ml-2 z-99;
+}
+
+.suneditor-dark .se-wrapper,
+.suneditor-dark .se-wrapper iframe {
+  background-color: #1f2937;
+  /* Tailwind gray-800 */
+  color: white;
+}
+
+.suneditor-light .se-wrapper,
+.suneditor-light .se-wrapper iframe {
+  background-color: white;
+  color: black;
+}
+
+/* Blog editor: fixed editing viewport; scroll inside SunEditor only */
+.blog-body-editor-shell {
+  position: relative;
+}
+
+.blog-body-editor-shell .sun-editor {
+  border: none !important;
+  width: 100% !important;
+}
+
+.blog-body-editor-shell .sun-editor .se-container {
+  overflow: hidden;
+}
+
+.blog-body-editor-shell .sun-editor .se-toolbar {
+  overflow: visible !important;
+}
+
+.blog-body-editor-shell .sun-editor .se-wrapper {
+  height: 400px !important;
+  max-height: 400px !important;
+  min-height: 400px !important;
+  overflow: hidden !important;
+}
+
+.blog-body-editor-shell .sun-editor .se-wrapper .se-wrapper-inner {
+  height: 100% !important;
+  max-height: 100% !important;
+  overflow-x: hidden !important;
+  overflow-y: auto !important;
+}
+
+.blog-body-editor-shell .sun-editor .se-wrapper-wysiwyg {
+  min-height: 0 !important;
+}
+
+.blog-body-editor-shell .se-list-layer,
+.blog-body-editor-shell .se-selector-table,
+.blog-body-editor-shell .se-submenu,
+.blog-body-editor-shell .se-dialog,
+.blog-body-editor-shell .se-controller {
+  z-index: 10060 !important;
+}
+
+.blog-article-html h1,
+.blog-article-html h2,
+.blog-article-html h3 {
+  margin: 1.75rem 0 0;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: #0f172a;
+}
+
+.blog-article-html h2 {
+  font-size: 1.625rem;
+}
+
+.blog-article-html h3 {
+  font-size: 1.25rem;
+}
+
+.blog-article-html p {
+  margin: 1.125rem 0 0;
+}
+
+.blog-article-html ul,
+.blog-article-html ol {
+  margin: 1rem 0 0 1.25rem;
+  padding: 0;
+}
+
+.blog-article-html blockquote {
+  margin: 1.75rem 0 0;
+  padding: 1rem 1.25rem;
+  border-left: 4px solid #1e3a5f;
+  background: #f4f7fb;
+  border-radius: 0 12px 12px 0;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.blog-article-html a {
+  color: #1e3a5f;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.blog-article-html img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  margin-top: 1.25rem;
+}
+
+.hand {
+  cursor: pointer !important;
+}
+
+/* React Big Calendar Dark Mode */
+.rbc-calendar {
+  background: white;
+}
+
+.dark .rbc-calendar {
+  background: rgb(31, 41, 55);
+  color: rgb(243, 244, 246);
+}
+
+.dark .rbc-header {
+  background: rgb(42, 71, 117);
+  color: rgb(243, 244, 246);
+  border-color: rgb(75, 85, 99);
+}
+
+.dark .rbc-month-view {
+  border-color: rgb(75, 85, 99);
+}
+
+.dark .rbc-day-bg {
+  border-color: rgb(75, 85, 99);
+}
+
+.dark .rbc-off-range-bg {
+  background: rgb(55, 65, 81);
+}
+
+.dark .rbc-today {
+  background-color: rgb(59, 130, 246, 0.2);
+}
+
+.dark .rbc-event {
+  color: white;
+  font-weight: 500;
+}
+
+.dark .rbc-toolbar {
+  color: rgb(243, 244, 246);
+}
+
+.dark .rbc-toolbar button {
+  color: rgb(243, 244, 246);
+  background: rgb(55, 65, 81);
+  border-color: rgb(75, 85, 99);
+}
+
+.dark .rbc-toolbar button:hover {
+  background: rgb(75, 85, 99);
+}
+
+.dark .rbc-toolbar button.rbc-active {
+  background: rgb(59, 130, 246);
+  color: white;
+}
+
+.leftside-scrollbar::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+.mobile-menu-debug {
+  border: 2px solid rgb(129, 0, 0) !important;
+  background: yellow !important;
+}
+
+/* ==========================================================================
+   PRINT STYLES FOR INVOICES & REPORTS
+   ========================================================================== */
+@media print {
+  @page {
+    size: A4 portrait;
+    margin: 10mm 12mm 12mm 12mm;
+  }
+
+  /* 1. Global Reset & Pristine White Page */
+  html,
+  body {
+    background: #ffffff !important;
+    color: #111827 !important;
+    overflow: visible !important;
+    height: auto !important;
+    min-height: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    scrollbar-width: none !important;
+    -ms-overflow-style: none !important;
+  }
+
+  /* Remove all scrollbars across all elements */
+  *,
+  *::before,
+  *::after {
+    scrollbar-width: none !important;
+    -ms-overflow-style: none !important;
+    box-shadow: none !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  *::-webkit-scrollbar {
+    display: none !important;
+    width: 0 !important;
+    height: 0 !important;
+  }
+
+  /* 2. Hide TanStack Query DevTools & All Floating Debug Elements */
+  .tsqd-parent-container,
+  [data-tanstack-query-devtools],
+  div[class*="tsqd"],
+  button[class*="tsqd"],
+  #react-query-devtools,
+  [data-rk],
+  div[style*="z-index: 99999"],
+  div[style*="z-index: 9999"],
+  div[style*="z-index: 2147483647"] {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+  }
+
+  /* 3. Hide Site Layout Shell (Sidebar, Header, Navbar, Breadcrumbs) */
+  aside,
+  header,
+  nav,
+  .no-print,
+  [data-print-hidden="true"] {
+    display: none !important;
+  }
+
+  /* Remove left padding shift caused by sidebar */
+  div[style*="paddingLeft"] {
+    padding-left: 0 !important;
+  }
+
+  /* 4. Avoid breaking critical sections across pages */
+  tr,
+  .print-avoid-break {
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+}

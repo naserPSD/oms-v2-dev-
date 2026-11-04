@@ -1,0 +1,6 @@
+{
+    "description": "This is a sample description for the common locale file.",
+    "greeting": "Hello, World!",
+    "bangla": "বাংলা",
+    "lang": "English"
+}

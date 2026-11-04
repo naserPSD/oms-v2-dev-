@@ -1,0 +1,35 @@
+<p style="font-size: 18px; font-weight: 700; margin: 0 0 16px 0; font-family: Arial, Helvetica, sans-serif; color: #111827;">
+  New Contact Form Message
+</p>
+
+<p style="margin: 0 0 20px 0; color: #374151; font-family: Arial, Helvetica, sans-serif; line-height: 1.5;">
+  You have received a new contact inquiry submitted from the website form:
+</p>
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin: 0 0 24px 0; border-collapse: collapse; background-color: #f9fafb; border: 1px solid #e5e7eb; border-radius: 8px; padding: 16px;">
+  <tr>
+    <td style="font-family: Arial, Helvetica, sans-serif; padding: 12px 16px;">
+      <p style="margin: 0 0 8px 0; color: #374151; font-size: 14px;">
+        <strong style="color: #111827;">Sender Name:</strong> {{name}}
+      </p>
+      <p style="margin: 0 0 8px 0; color: #374151; font-size: 14px;">
+        <strong style="color: #111827;">Work Email:</strong> <a href="mailto:{{email}}" style="color: #2563eb; text-decoration: none;">{{email}}</a>
+      </p>
+      <p style="margin: 0 0 8px 0; color: #374151; font-size: 14px;">
+        <strong style="color: #111827;">Mobile:</strong> <a href="tel:{{mobile}}" style="color: #2563eb; text-decoration: none;">{{mobile}}</a>
+      </p>
+      <p style="margin: 0; color: #374151; font-size: 14px;">
+        <strong style="color: #111827;">Company:</strong> {{#if company}}{{company}}{{else}}N/A{{/if}}
+      </p>
+    </td>
+  </tr>
+</table>
+
+<div style="margin: 0 0 24px 0; padding: 16px; background-color: #ffffff; border-left: 4px solid #0284c7; border-radius: 4px;">
+  <p style="margin: 0 0 8px 0; font-size: 14px; font-weight: 700; color: #111827; font-family: Arial, Helvetica, sans-serif;">
+    Message Body:
+  </p>
+  <p style="margin: 0; color: #374151; font-family: Arial, Helvetica, sans-serif; font-size: 14px; line-height: 1.6; white-space: pre-wrap;">{{message}}</p>
+</div>
+
+<p style="margin: 0 0 4px 0; color: #1f2937; font-weight: 600; font-family: Arial, Helvetica, sans-serif; line-height: 1.5;">This inquiry was sent to info@domplio.com</p>
